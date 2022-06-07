@@ -1,53 +1,72 @@
 body {
   margin: 0;
+  padding: 0;
 
-  /* BEGIN (write your solution here) */
   color: #333;
-  font-size: 18px;
-  /* END */
   font-family: sans-serif;
   line-height: 1.5;
+
+  background: #f9f9f9;
 }
 
-/* BEGIN (write your solution here) */
-h1 {
-  margin-top: 50px;
-  margin-bottom: 10px;
-  font-size: 60px;
-  text-align: center;
+.header {
+  padding: 20px 40px;
 }
 
-/* END */
-
-h2 {
-  /* BEGIN (write your solution here) */
-  margin-top: 0px;
-  padding-bottom: 30px;
-  font-size: 25px;
-  text-align: center;
-  /* END */
-
-  border-bottom: 2px solid #e3e3e3;
+.header-white {
+  background: #fff;
 }
 
-main {
-  width: 900px;
-  margin: auto;
+.nav ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
-/* BEGIN (write your solution here) */
-section {
-  margin: 50px 0px;
-  padding: 0px 50px;
+.nav > ul {
+  display: flex;
 }
 
-section h2 {
-  padding: 0px;
-  border: none;
-  text-align: left;
+.nav li {
+  position: relative;
+
+  padding: 15px 30px;
+
+  cursor: pointer;
 }
 
-section ul li {
-  margin-bottom: 10px;
+.sub-menu {
+  display: none;
 }
-/* END */
+
+.nav li:hover > .sub-menu {
+  position: absolute;
+  left: 0px;
+
+  display: block;
+
+  width: max-content;
+  padding-top: 25px;
+
+  background: #fff;
+  -webkit-box-shadow: 5px 5px 5px 0 rgba(240, 240, 240, 1);
+  -moz-box-shadow: 5px 5px 5px 0 rgba(240, 240, 240, 1);
+  box-shadow: 5px 5px 5px 0 rgba(240, 240, 240, 1);
+}
+
+.nav a {
+  color: #333;
+  text-decoration: none;
+}
+
+.nav .nav-title {
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav li:hover > a,
+.nav li:hover > .nav-title {
+  color: #717171;
+}
